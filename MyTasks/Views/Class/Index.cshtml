@@ -1,0 +1,22 @@
+﻿@model List<Class>
+
+<a asp-controller="Class" asp-action="Create" class="btn btn-primary">Create</a>
+@foreach (var item in Model)
+{
+
+	<div class="text-center">
+		<p>ClassName:@item.ClassName</p>
+		<p>ClassTeacher:@item.ClassTeacher</p>
+	</div>
+	<div class="d-flex justify-content-center">
+		
+	<form asp-action="Delete" method="post" asp-route-Id="@item.Id">
+		<input class=" btn btn-outline-danger" type="submit" value="Delete"/>
+	</form>
+
+	<a asp-action="Update" class="btn btn-outline-warning" asp-route-Id="@item.Id">Update</a>
+
+	</div>
+	<hr />
+	<hr />
+}

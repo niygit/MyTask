@@ -1,0 +1,71 @@
+﻿@model EducationCenterVM
+<h2 class="text-center">EducationCenter</h2>
+@foreach (var school in Model.Schools)
+{
+
+	<div class="text-center">
+		<p>@school.Class</p>
+		<p>@school.Student</p>
+		<p>@school.Teacher</p>
+		<p>@school.Director</p>
+	</div>
+	<hr />
+	<hr />
+}
+
+<hr />
+<h3 class="text-center">Classes</h3>
+@foreach (var item in Model.Classes)
+{
+
+	<div class="text-center">
+		<p>ClassName:@item.ClassName</p>
+		<p>ClassTeacher:@item.ClassTeacher</p>
+	</div>
+	<hr />
+	<hr />
+}
+<hr />
+<h3 class="text-center">Students</h3>
+@foreach (var student in Model.Students)
+{
+
+	<div class="text-center">
+		<p>Name:@student.Name</p>
+		<p>Surname::@student.Surname</p>
+		<p>ClassName::@student.ClassName</p>
+		<p>TeacherName::@student.TeacherName</p>
+	</div>
+	<hr />
+	<hr />
+}
+<hr />
+<h3 class="text-center">Teachers</h3>
+@foreach (var teacher in Model.Teachers)
+{
+
+	<div class="text-center">
+		<p>Name:@teacher.Name</p>
+		<p>Surname::@teacher.Surname</p>
+		<p>ClassName::@teacher.ClassName</p>
+	</div>
+	<hr />
+	<hr />
+}
+<hr />
+<h3 class="text-center">Director</h3>
+@foreach (var director in Model.Director)
+{
+
+	<div class="text-center">
+		<p>Name:@director.Name</p>
+		<p>Surname:@director.Surname</p>
+		<p>Age:@director.Age</p>
+	</div>
+}
+
+
+
+
+
+

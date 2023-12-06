@@ -1,0 +1,23 @@
+﻿@model List<Student>
+
+<a asp-action="Create" class="btn btn-primary">Create</a>
+@foreach (var student in Model)
+{
+
+	<div class="text-center">
+		<p>Name:@student.Name</p>
+		<p>Surname::@student.Surname</p>
+		<p>ClassName::@student.ClassName</p>
+		<p>TeacherName::@student.TeacherName</p>
+	</div>
+	<div class=" d-flex justify-content-center">
+		<form asp-action="Delete" method="post" asp-route-Id="@student.Id">
+			<input type="submit" value="Delete" class="btn btn-outline-danger"/>
+		</form>
+		
+		<a asp-action="Update" class="btn btn-outline-warning" asp-route-Id="@student.Id">Update</a>
+	</div>
+
+	<hr />
+	<hr />
+}

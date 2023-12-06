@@ -1,0 +1,8 @@
+﻿@model UpdateSchoolVM
+<form asp-action="Update" method="post">
+	<input asp-for="Class" class="form-control" type="text" placeholder="Class" />
+	<input asp-for="Student" class="form-control" type="text" placeholder="Student" />
+	<input asp-for="Teacher" class="form-control" type="text" placeholder="Teacher" />
+	<input asp-for="Director" class="form-control" type="text" placeholder="Director" />
+	<input class="btn btn-primary" type="submit" value="Update School" />
+</form>

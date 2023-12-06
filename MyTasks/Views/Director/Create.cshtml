@@ -1,0 +1,8 @@
+﻿@model CreateDirectorVM
+
+<form asp-action="Create" method="post">
+	<input asp-for="Name" class="form-control" type="text" placeholder="Name" />
+	<input asp-for="Surname" class="form-control" type="text" placeholder="Surname" />
+	<input asp-for="Age" class="form-control" type="number" placeholder="Age"/>
+	<input class="btn btn-primary" type="submit" value="Create Director" />
+</form>
